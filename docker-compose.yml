@@ -2,6 +2,7 @@ version: '3'
 services:
   okty:
     image: 'node:8-alpine'
+    container_name: 'okty-app'
     ports:
       - '4200:4200'
     volumes:
@@ -10,6 +11,7 @@ services:
     command: ['sh', '-c', 'npm install && npm start']
   config:
     image: 'node:8-alpine'
+    container_name: 'okty-config-app'
     ports:
       - '3000:3000'
     volumes:
